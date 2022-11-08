@@ -35,6 +35,9 @@ class RowMapperSpec extends AnyWordSpec with Matchers {
       withClue("and should be implicitly available, and not be derived twice") {
         implicitly[RowMapper[IceCream]] shouldBe IceCream.rowMapper
       }
+
+      printf("foo %d, bar %s", 123, "42")
+      printf("foo %d, bar %s", 144, "12")
     }
 
     "produce instances for tuples" in {
